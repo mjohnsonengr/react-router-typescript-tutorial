@@ -1,14 +1,23 @@
 import * as React from 'react';
-import {Link} from 'react-router';
+import {NavLink} from './NavLink';
 
-export function Repos({}) {
-    return (
-        <div>
-            <h2>Repos</h2>
-            <ul>
-                <li><Link to="/repos/rackt/react-router">React Router</Link></li>
-                <li><Link to="/repos/facebook/react">React</Link></li>
-            </ul>
-        </div>
-    );
+interface ReposProps extends React.Props<Repos> { }
+
+export class Repos extends React.Component<ReposProps, {}> {
+    public render() {
+        return (
+            <div>
+                <h2>Repos</h2>
+                <ul>
+                    <li>
+                        <NavLink to="/repos/rackt/react-router">React Router</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/repos/facebook/react">React</NavLink>
+                    </li>
+                </ul>
+                {this.props.children}
+            </div>
+        );
+    }
 }
