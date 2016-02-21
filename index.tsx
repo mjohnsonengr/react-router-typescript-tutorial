@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {IndexRoute, Router, Route, hashHistory } from 'react-router';
+import {IndexRoute, Router, Route, browserHistory } from 'react-router';
 import {App} from './modules/App';
 import {About} from './modules/About';
 import {Home} from './modules/Home';
@@ -10,7 +10,7 @@ import {Repos} from './modules/Repos';
 console.log("Halp!");
 
 ReactDOM.render((
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
         <Route path="/" component={App}>
             <IndexRoute component={Home}/>
             <Route path="/repos" component={Repos}>
