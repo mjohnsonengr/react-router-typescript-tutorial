@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "amd",
+    "target": "es5",
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "built"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "index.tsx",
+    "modules/App.tsx",
+    "modules/About.tsx",
+    "modules/Home.tsx",
+    "modules/NavLink.tsx",
+    "modules/Repo.tsx",
+    "modules/Repos.tsx",
+    "typings/tsd.d.ts"
+  ]
+}
