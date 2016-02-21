@@ -7,8 +7,6 @@ import {Home} from './modules/Home';
 import {Repo} from './modules/Repo';
 import {Repos} from './modules/Repos';
 
-console.log("Halp!");
-
 ReactDOM.render((
     <Router history={browserHistory}>
         <Route path="/" component={App}>
