@@ -1,8 +1,11 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: './index.tsx',
 
     output: {
         filename: 'bundle.js',
+        path: 'public',
         publicPath: ''
     },
 
@@ -15,5 +18,11 @@ module.exports = {
         loaders: [
             {test: /\.tsx?$/, loader: 'ts-loader'},
         ]
-    }
+    },
+
+    plugins: process.env.NODE_ENV === 'production' ? [
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.UglifyJsPlugin()
+    ] : []
 };
