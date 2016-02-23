@@ -2,7 +2,11 @@ import * as React from 'react';
 import {Link} from 'react-router';
 import LinkProps = ReactRouter.LinkProps;
 
-export class NavLink extends React.Component<LinkProps, {}> {
+interface NavLinkProps extends LinkProps {
+    ref?: any;
+}
+
+export class NavLink extends React.Component<NavLinkProps, {}> {
     public render()
     {
         return <Link {...this.props} activeClassName="active"/>;
