@@ -18,7 +18,7 @@ export class Repos extends React.Component<ReposProps, {}> {
         router: React.PropTypes.object
     };
 
-    public handleSubmit(event: React.FormEvent) {
+    public handleSubmit = (event: React.FormEvent) => {
         // to get proper typing, this part is either complex or rather hacky
         // it has coupled logic in that it knows more than it should about the structure of the form
         // best way is probably to create a new component for the form.
