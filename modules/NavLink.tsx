@@ -6,13 +6,4 @@ interface NavLinkProps extends LinkProps {
     ref?: any;
 }
 
-export class NavLink extends React.Component<NavLinkProps, {}> {
-    public render()
-    {
-        return <Link {...this.props} activeClassName="active"/>;
-    }
-}
-
-// I think the problem with the following is something that is fixed in TypeScript 1.8...
-// https://github.com/Microsoft/TypeScript/issues/4861
-//export function NavLink(props: any) { return <Link {...props} activeClassName="active"/>; }
+export function NavLink(props: NavLinkProps) { return <Link {...props} activeClassName="active"/>; }
